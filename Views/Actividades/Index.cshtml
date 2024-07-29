@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Actividades>
+
+@{
+    ViewData["Title"] = "Actividades";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Actividades</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva Actividad</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ActividadId</td>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>@item.FechaInicio.ToShortDateString()</td>
+                <td>@item.FechaFin.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Create" asp-route-id="@item.ActividadId" class="btn btn-warning">Create</a>
+                    <a asp-action="Edit" asp-route-id="@item.ActividadId" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.ActividadId" class="btn btn-danger">Eliminar</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

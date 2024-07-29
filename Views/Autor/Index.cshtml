@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Autor>
+@{
+    ViewData["Title"] = "Autor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Autor</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Autor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Cargo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AutorId</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.Telefono</td>
+                <td>@item.Cargo</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AutorId" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.AutorId" class="btn btn-danger">Eliminar</a>
+                    <a asp-action="Details" asp-route-id="@item.AutorId" class="btn btn-info">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

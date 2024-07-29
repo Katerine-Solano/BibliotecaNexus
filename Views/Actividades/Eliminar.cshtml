@@ -1,0 +1,52 @@
+﻿@model BibliotecaNexus.Data.Domain.Entidades.Actividades
+
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro que desea eliminar esta actividad?</h3>
+<div>
+    <h4>Actividad</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            ID
+        </dt>
+        <dd class="col-sm-10">
+            @Model.ActividadId
+        </dd>
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Descripcion
+        </dd>
+        <dt class="col-sm-2">
+            Fecha Inicio
+        </dt>
+        <dd class="col-sm-10">
+            @Model.FechaInicio.ToShortDateString()
+        </dd>
+        <dt class="col-sm-2">
+            Fecha Fin
+        </dt>
+        <dd class="col-sm-10">
+            @Model.FechaFin.ToShortDateString()
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ActividadId" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
