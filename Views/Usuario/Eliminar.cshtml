@@ -1,0 +1,26 @@
+﻿@model BibliotecaNexus.Data.Domain.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar Usuario</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div>
+    <h4>¿Estás seguro de que deseas eliminar este usuario?</h4>
+    <div>
+        <h4>Nombre de Usuario: @Model.NombreUsuario</h4>
+        <p>Tipo de Usuario: @Model.TipoUsuario</p>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UsuarioId" />
+        <div class="form-group">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

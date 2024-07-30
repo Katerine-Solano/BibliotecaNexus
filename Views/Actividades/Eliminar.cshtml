@@ -1,52 +1,32 @@
 ﻿@model BibliotecaNexus.Data.Domain.Entidades.Actividades
 
 @{
-    ViewData["Title"] = "Eliminar";
+    ViewData["Title"] = "Eliminar Actividad";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Eliminar</h1>
+<h1>Eliminar Actividad</h1>
 
-<h3>¿Está seguro que desea eliminar esta actividad?</h3>
+<h4>Actividad</h4>
+<hr />
 <div>
-    <h4>Actividad</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            ID
-        </dt>
-        <dd class="col-sm-10">
-            @Model.ActividadId
-        </dd>
-        <dt class="col-sm-2">
-            Nombre
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Nombre
-        </dd>
-        <dt class="col-sm-2">
-            Descripción
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Descripcion
-        </dd>
-        <dt class="col-sm-2">
-            Fecha Inicio
-        </dt>
-        <dd class="col-sm-10">
-            @Model.FechaInicio.ToShortDateString()
-        </dd>
-        <dt class="col-sm-2">
-            Fecha Fin
-        </dt>
-        <dd class="col-sm-10">
-            @Model.FechaFin.ToShortDateString()
-        </dd>
-    </dl>
-
-    <form asp-action="Delete">
+    <h4>¿Está seguro de que desea eliminar esta actividad?</h4>
+    <div>
+        <h4>@Model.Nombre</h4>
+        <dl class="row">
+            <dt class="col-sm-2">Descripción</dt>
+            <dd class="col-sm-10">@Model.Descripcion</dd>
+            <dt class="col-sm-2">Fecha Inicio</dt>
+            <dd class="col-sm-10">@Model.FechaInicio.ToShortDateString()</dd>
+            <dt class="col-sm-2">Fecha Fin</dt>
+            <dd class="col-sm-10">@Model.FechaFin.ToShortDateString()</dd>
+        </dl>
+    </div>
+    <form asp-action="DeleteConfirmed">
         <input type="hidden" asp-for="ActividadId" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        <div class="form-group">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
     </form>
 </div>

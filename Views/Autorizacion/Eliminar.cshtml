@@ -1,0 +1,25 @@
+﻿@model BibliotecaNexus.Data.Domain.Entidades.Autorizacion
+
+@{
+    ViewData["Title"] = "Eliminar Autorización";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar Autorización</h1>
+
+<h4>Autorizacion</h4>
+<hr />
+<div>
+    <h4>¿Estás seguro de que quieres eliminar esta autorización?</h4>
+    <div>
+        <h5>ID: @Model.AutorizacionId</h5>
+        <h5>Módulo: @Model.Modulo</h5>
+        <h5>Permiso: @Model.Permiso</h5>
+    </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AutorizacionId" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+    </form>
+</div>
+

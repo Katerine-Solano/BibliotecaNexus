@@ -3,68 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\reserva\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\reserva\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\libro\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\libro\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\reserva\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\reserva\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\libro\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\libro\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\reserva\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\reserva\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\autor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\autor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\reserva\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\reserva\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\libro\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\libro\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\usuario\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\usuario\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\libro\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\libro\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\usuario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\usuario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\usuario\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\usuario\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\usuario\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\usuario\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\prestamovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\prestamovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\categoria\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\categoria\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\comentariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\comentariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\categoria\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\categoria\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\prestamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\prestamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\autor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\autor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\autor\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\autor\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\actividades\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\actividades\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\autor\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\autor\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\actividades\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\actividades\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\actividades\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -75,136 +87,36 @@
       "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\actividades\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\actividades\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\actividades\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\cliente\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\cliente\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214936_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240729214936_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\cliente\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\cliente\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\comentariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\comentariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\views\\cliente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:views\\cliente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\librovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\librovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214713_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240729214713_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\configuracionentidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\configuracionentidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\prestamovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\prestamovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\reservavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\reservavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\clientevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\clientevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\categoriavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\categoriavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\autorizacionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\autorizacionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\autorizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\autorizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\autorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\autorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\models\\actividadesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:models\\actividadesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\entidades\\actividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\entidades\\actividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\data\\domain\\bibliotecanexusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:data\\domain\\bibliotecanexusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|c:\\users\\dell\\source\\repos\\bibliotecanexus\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9B91BAD-92F3-4E17-9451-FE3973BA3963}|BibliotecaNexus.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -214,669 +126,383 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 27,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LibroController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\LibroController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LibroController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\LibroController.cs",
-              "RelativeToolTip": "Controllers\\LibroController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAJ4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T23:43:09.51Z",
+              "DocumentIndex": 1,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reserva\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Reserva\\Editar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T05:42:06.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Eliminar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Eliminar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Libro\\Eliminar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Eliminar.cshtml",
-              "RelativeToolTip": "Views\\Libro\\Eliminar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:32:57.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Libro\\Create.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Create.cshtml",
-              "RelativeToolTip": "Views\\Libro\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:31:50.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Libro\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Editar.cshtml",
-              "RelativeToolTip": "Views\\Libro\\Editar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:30:27.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Libro\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Libro\\Index.cshtml",
-              "RelativeToolTip": "Views\\Libro\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:28:45.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Eliminar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Eliminar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Categoria\\Eliminar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Eliminar.cshtml",
-              "RelativeToolTip": "Views\\Categoria\\Eliminar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:22:01.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Categoria\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Editar.cshtml",
-              "RelativeToolTip": "Views\\Categoria\\Editar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:20:46.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Categoria\\Create.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Create.cshtml",
-              "RelativeToolTip": "Views\\Categoria\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T23:19:00.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AQIAABUAAADAmZmZmZkUwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:51:06.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reserva\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Reserva\\Eliminar.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:51:03.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAWwCoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:50:32.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:50:13.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:50:07.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\_ViewStart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:48:54.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Categoria\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Categoria\\Index.cshtml",
-              "RelativeToolTip": "Views\\Categoria\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAiwAgAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:18:04.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Eliminar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Eliminar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Autor\\Eliminar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Eliminar.cshtml",
-              "RelativeToolTip": "Views\\Autor\\Eliminar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:16:30.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Detalle.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Detalle.cshtml",
-              "RelativeDocumentMoniker": "Views\\Autor\\Detalle.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Detalle.cshtml",
-              "RelativeToolTip": "Views\\Autor\\Detalle.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:15:28.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Autor\\Create.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Create.cshtml",
-              "RelativeToolTip": "Views\\Autor\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:12:38.18Z",
+              "WhenOpened": "2024-07-30T05:42:05.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Autor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Autor\\Index.cshtml",
-              "RelativeToolTip": "Views\\Autor\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA/AAAA",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reserva\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reserva\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:09:49.744Z",
+              "WhenOpened": "2024-07-30T05:42:03.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Eliminar.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Eliminar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Actividades\\Eliminar.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Eliminar.cshtml",
-              "RelativeToolTip": "Views\\Actividades\\Eliminar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:07:35.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Actividades\\Create.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Create.cshtml",
-              "RelativeToolTip": "Views\\Actividades\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:05:14.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Actividades\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Index.cshtml",
-              "RelativeToolTip": "Views\\Actividades\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Index.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-29T22:03:17.591Z",
+              "WhenOpened": "2024-07-30T05:42:00.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\CategoriaController.cs",
-              "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T22:00:40.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AutorController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\AutorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AutorController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\AutorController.cs",
-              "RelativeToolTip": "Controllers\\AutorController.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAHgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T22:00:01.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ActividadesController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ActividadesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ActividadesController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ActividadesController.cs",
-              "RelativeToolTip": "Controllers\\ActividadesController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAAAsAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T21:59:16.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "20240729214936_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214936_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240729214936_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214936_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20240729214936_InitialCreate.cs",
+              "DocumentIndex": 5,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Eliminar.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T21:49:36.709Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T05:41:58.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "20240729214713_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214713_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240729214713_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Migrations\\20240729214713_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20240729214713_InitialCreate.cs",
+              "DocumentIndex": 6,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Editar.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T21:47:15.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T03:33:04.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-28T03:29:08.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "BibliotecaNexusDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\BibliotecaNexusDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\BibliotecaNexusDbContext.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\BibliotecaNexusDbContext.cs",
-              "RelativeToolTip": "Data\\Domain\\BibliotecaNexusDbContext.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAADwvwQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T02:46:53.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ConfiguracionEntidades.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\ConfiguracionEntidades.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\ConfiguracionEntidades.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\ConfiguracionEntidades.cs",
-              "RelativeToolTip": "Data\\Domain\\ConfiguracionEntidades.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIkAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T02:35:26.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UsuarioVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\UsuarioVm.cs",
-              "RelativeDocumentMoniker": "Models\\UsuarioVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\UsuarioVm.cs",
-              "RelativeToolTip": "Models\\UsuarioVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:40:12.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ReservaVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ReservaVm.cs",
-              "RelativeDocumentMoniker": "Models\\ReservaVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ReservaVm.cs",
-              "RelativeToolTip": "Models\\ReservaVm.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:39:50.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "PrestamoVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\PrestamoVm.cs",
-              "RelativeDocumentMoniker": "Models\\PrestamoVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\PrestamoVm.cs",
-              "RelativeToolTip": "Models\\PrestamoVm.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAYAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:39:35.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "LibroVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\LibroVm.cs",
-              "RelativeDocumentMoniker": "Models\\LibroVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\LibroVm.cs",
-              "RelativeToolTip": "Models\\LibroVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:39:16.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ComentarioVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ComentarioVm.cs",
-              "RelativeDocumentMoniker": "Models\\ComentarioVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ComentarioVm.cs",
-              "RelativeToolTip": "Models\\ComentarioVm.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:38:58.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "ClienteVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ClienteVm.cs",
-              "RelativeDocumentMoniker": "Models\\ClienteVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ClienteVm.cs",
-              "RelativeToolTip": "Models\\ClienteVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:38:37.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "CategoriaVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\CategoriaVm.cs",
-              "RelativeDocumentMoniker": "Models\\CategoriaVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\CategoriaVm.cs",
-              "RelativeToolTip": "Models\\CategoriaVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:38:18.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "AutorizacionVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\AutorizacionVm.cs",
-              "RelativeDocumentMoniker": "Models\\AutorizacionVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\AutorizacionVm.cs",
-              "RelativeToolTip": "Models\\AutorizacionVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:37:54.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "AutorVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\AutorVm.cs",
-              "RelativeDocumentMoniker": "Models\\AutorVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\AutorVm.cs",
-              "RelativeToolTip": "Models\\AutorVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:37:32.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ActividadesVm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ActividadesVm.cs",
-              "RelativeDocumentMoniker": "Models\\ActividadesVm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ActividadesVm.cs",
-              "RelativeToolTip": "Models\\ActividadesVm.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:37:09.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Usuario.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Usuario.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Usuario.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:36:16.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Reserva.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Reserva.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Reserva.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Reserva.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Reserva.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAQwAQAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:35:57.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Prestamo.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Prestamo.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Prestamo.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Prestamo.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Prestamo.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:35:41.953Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T05:41:56.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Libro.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Libro.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Libro.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Libro.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Libro.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:35:19.468Z",
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Detalle.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Detalle.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Detalle.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T05:41:54.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Comentario.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Comentario.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Comentario.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Comentario.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Comentario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:35:01.347Z",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Create.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Usuario\\Create.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T05:41:51.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Cliente.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Cliente.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Cliente.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Cliente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "DocumentIndex": 9,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Reserva.cs",
+              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Reserva.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Reserva.cs",
+              "RelativeToolTip": "Data\\Domain\\Entidades\\Reserva.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:34:46.016Z",
+              "WhenOpened": "2024-07-30T05:27:10.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PrestamoVm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\PrestamoVm.cs",
+              "RelativeDocumentMoniker": "Models\\PrestamoVm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\PrestamoVm.cs",
+              "RelativeToolTip": "Models\\PrestamoVm.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T05:03:56.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Categoria.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Categoria.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Categoria.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Categoria.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Title": "ComentarioVm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ComentarioVm.cs",
+              "RelativeDocumentMoniker": "Models\\ComentarioVm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Models\\ComentarioVm.cs",
+              "RelativeToolTip": "Models\\ComentarioVm.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:34:18.617Z",
+              "WhenOpened": "2024-07-30T05:03:44.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Autorizacion.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Autorizacion.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Autorizacion.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Autorizacion.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Autorizacion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "DocumentIndex": 13,
+              "Title": "Prestamo.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Prestamo.cs",
+              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Prestamo.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Prestamo.cs",
+              "RelativeToolTip": "Data\\Domain\\Entidades\\Prestamo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:33:58.347Z",
+              "WhenOpened": "2024-07-30T05:03:05.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Autor.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Autor.cs",
-              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Autor.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Autor.cs",
-              "RelativeToolTip": "Data\\Domain\\Entidades\\Autor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAqAAAA",
+              "DocumentIndex": 14,
+              "Title": "PrestamoController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\PrestamoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PrestamoController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\PrestamoController.cs",
+              "RelativeToolTip": "Controllers\\PrestamoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:33:39.738Z",
+              "WhenOpened": "2024-07-30T05:03:02.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 15,
+              "Title": "Comentario.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Comentario.cs",
+              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Comentario.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Comentario.cs",
+              "RelativeToolTip": "Data\\Domain\\Entidades\\Comentario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T04:47:39.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ComentarioController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ComentarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ComentarioController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ComentarioController.cs",
+              "RelativeToolTip": "Controllers\\ComentarioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T04:47:36.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Libro.cs",
+              "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Libro.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Libro.cs",
+              "RelativeToolTip": "Data\\Domain\\Entidades\\Libro.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T04:42:41.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAswCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T04:30:51.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\Eliminar.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAswBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T04:30:36.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\Editar.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T04:30:15.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\Create.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Cliente\\Create.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\Create.cshtml",
+              "ViewState": "AQIAACIAAAAAAAAAAAAswDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T04:29:04.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "Actividades.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Actividades.cs",
               "RelativeDocumentMoniker": "Data\\Domain\\Entidades\\Actividades.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Data\\Domain\\Entidades\\Actividades.cs",
               "RelativeToolTip": "Data\\Domain\\Entidades\\Actividades.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T00:32:25.361Z",
+              "WhenOpened": "2024-07-30T04:23:49.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAgwJEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T04:23:04.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Actividades\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Index.cshtml",
+              "RelativeToolTip": "Views\\Actividades\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T03:53:10.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Actividades\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Actividades\\Eliminar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T03:53:07.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Actividades\\Create.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Create.cshtml",
+              "RelativeToolTip": "Views\\Actividades\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T03:53:04.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Actividades\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Actividades\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Actividades\\Editar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T03:52:42.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ActividadesController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ActividadesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ActividadesController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\ActividadesController.cs",
+              "RelativeToolTip": "Controllers\\ActividadesController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAmwFAAAAB/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T03:45:01.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reserva\\Create.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Views\\Reserva\\Create.cshtml",
+              "RelativeToolTip": "Views\\Reserva\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-30T03:40:30.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BibliotecaNexus\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaController.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAmwHwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T03:33:23.601Z",
               "EditorCaption": ""
             }
           ]

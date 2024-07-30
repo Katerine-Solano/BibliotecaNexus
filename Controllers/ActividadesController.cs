@@ -1,4 +1,5 @@
 ﻿using BibliotecaNexus.Data.Domain;
+using BibliotecaNexus.Data.Domain.Entidades;
 using BibliotecaNexus.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,13 +15,13 @@ namespace BibliotecaNexus.Controllers
             _context = context;
         }
 
-        // GET: Actividades
+        // GET: Actividad
         public async Task<IActionResult> Index()
         {
             return View(await _context.Actividades.ToListAsync());
         }
 
-        // GET: Actividades/Details/5
+        // GET: Actividad/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,16 +39,16 @@ namespace BibliotecaNexus.Controllers
             return View(actividad);
         }
 
-        // GET: Actividades/Create
+        // GET: Actividad/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Actividades/Create
+        // POST: Actividad/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ActividadId,Nombre,Descripcion,FechaInicio,FechaFin")] ActividadesVm actividad)
+        public async Task<IActionResult> Create([Bind("ActividadId,Nombre,Descripcion,FechaInicio,FechaFin")] Actividades actividad)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +59,7 @@ namespace BibliotecaNexus.Controllers
             return View(actividad);
         }
 
-        // GET: Actividades/Edit/5
+        // GET: Actividad/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,10 +75,10 @@ namespace BibliotecaNexus.Controllers
             return View(actividad);
         }
 
-        // POST: Actividades/Edit/5
+        // POST: Actividad/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ActividadId,Nombre,Descripcion,FechaInicio,FechaFin")] ActividadesVm actividad)
+        public async Task<IActionResult> Edit(int id, [Bind("ActividadId,Nombre,Descripcion,FechaInicio,FechaFin")] Actividades actividad)
         {
             if (id != actividad.ActividadId)
             {
@@ -107,7 +108,7 @@ namespace BibliotecaNexus.Controllers
             return View(actividad);
         }
 
-        // GET: Actividades/Delete/5
+        // GET: Actividad/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,7 +126,7 @@ namespace BibliotecaNexus.Controllers
             return View(actividad);
         }
 
-        // POST: Actividades/Delete/5
+        // POST: Actividad/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

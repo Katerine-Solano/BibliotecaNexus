@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Usuario>
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre de Usuario</th>
+            <th>Tipo de Usuario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UsuarioId</td>
+                <td>@item.NombreUsuario</td>
+                <td>@item.TipoUsuario</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.UsuarioId" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.UsuarioId" class="btn btn-danger">Eliminar</a>
+                    <a asp-action="Details" asp-route-id="@item.UsuarioId" class="btn btn-info">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

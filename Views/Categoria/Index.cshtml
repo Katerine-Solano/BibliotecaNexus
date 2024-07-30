@@ -1,37 +1,35 @@
 ﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Categoria>
 
 @{
-    ViewData["Title"] = "Categoria";
+    ViewData["Title"] = "Categorías";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Categoria</h1>
+<h1>Categorías</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva Categoría</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th></th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
+                <td>@item.CategoriaId</td>
+                <td>@item.Nombre</td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CategoriaId" class="btn btn-warning">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.CategoriaId" class="btn btn-info">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.CategoriaId" class="btn btn-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.CategoriaId" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.CategoriaId" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-

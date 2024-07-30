@@ -1,0 +1,24 @@
+﻿@model BibliotecaNexus.Data.Domain.Entidades.Comentario
+
+@{
+    ViewData["Title"] = "Eliminar Comentario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar Comentario</h1>
+
+<h4>Comentario</h4>
+<hr />
+<div>
+    <h4>¿Estás seguro de que quieres eliminar este comentario?</h4>
+    <div>
+        <h5>ID: @Model.ComentarioId</h5>
+        <h5>Cliente: @Model.Cliente.Nombre</h5>
+        <h5>Libro: @Model.Libro.Titulo</h5>
+    </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ComentarioId" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
