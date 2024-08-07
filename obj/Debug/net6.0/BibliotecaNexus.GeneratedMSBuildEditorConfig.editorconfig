@@ -34,6 +34,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/AgregarUsuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyZWdhclVzdWFyaW9cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/AgregarUsuario/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyZWdhclVzdWFyaW9cRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/AgregarUsuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyZWdhclVzdWFyaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/AgregarUsuario/Insertar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyZWdhclVzdWFyaW9cSW5zZXJ0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Autorizacion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JpemFjaW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,10 +98,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Cliente/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Cliente/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Cliente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Cliente/Insertar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbnNlcnRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Comentario/Create.cshtml]
@@ -178,20 +194,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/Detalle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhbGxlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/Editar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/Eliminar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFbGltaW5hci5jc2h0bWw=
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/CambiarContraseña.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYW1iaWFyQ29udHJhc2XDsWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Usuario/Index.cshtml]
@@ -206,6 +210,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Shared/Menudinamico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1lbnVkaW5hbWljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-6hfxcxxvlr
+
 [C:/Users/DELL/source/repos/BibliotecaNexus/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-33gz4fvbpa
+
+[C:/Users/DELL/source/repos/BibliotecaNexus/Views/Shared/_LayoutExterno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRFeHRlcm5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-ksmu2cmjtv

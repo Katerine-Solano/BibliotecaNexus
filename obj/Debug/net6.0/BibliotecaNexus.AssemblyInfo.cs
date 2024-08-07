@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaNexus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+133cbe775794e654adcc16bfa6267b989a155a6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d661ac341ad2de36f76db7e70c7ef2c15751866")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaNexus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaNexus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
