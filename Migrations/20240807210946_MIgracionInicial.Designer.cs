@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BibliotecaNexus.Migrations
 {
     [DbContext(typeof(BibliotecaNexusDbContext))]
-    [Migration("20240729214936_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240807210946_MIgracionInicial")]
+    partial class MIgracionInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,13 +24,11 @@ namespace BibliotecaNexus.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Actividades", b =>
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Actividade", b =>
                 {
-                    b.Property<int>("ActividadId")
+                    b.Property<Guid>("ActividadId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActividadId"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -50,16 +48,38 @@ namespace BibliotecaNexus.Migrations
 
                     b.HasKey("ActividadId");
 
-                    b.ToTable("Actividades", (string)null);
+                    b.ToTable("Actividade", (string)null);
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.AgrupadoModulos", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("createdBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AgrupadoModulos");
                 });
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Autor", b =>
                 {
-                    b.Property<int>("AutorId")
+                    b.Property<Guid>("AutorId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AutorId"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Apellido")
                         .IsRequired()
@@ -88,11 +108,9 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Autorizacion", b =>
                 {
-                    b.Property<int>("AutorizacionId")
+                    b.Property<Guid>("AutorizacionId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AutorizacionId"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Modulo")
                         .IsRequired()
@@ -111,11 +129,9 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Categoria", b =>
                 {
-                    b.Property<int>("CategoriaId")
+                    b.Property<Guid>("CategoriaId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaId"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -129,15 +145,16 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Cliente", b =>
                 {
-                    b.Property<int>("ClienteId")
+                    b.Property<Guid>("ClienteId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClienteId"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Direccion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -159,20 +176,18 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Comentario", b =>
                 {
-                    b.Property<int>("ComentarioId")
+                    b.Property<Guid>("ComentarioId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComentarioId"), 1L, 1);
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("LibroId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("LibroId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LibroId1")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("LibroId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ComentarioId");
 
@@ -187,20 +202,18 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Libro", b =>
                 {
-                    b.Property<int>("LibroId")
+                    b.Property<Guid>("LibroId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LibroId"), 1L, 1);
+                    b.Property<Guid>("AnioPublicacion")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AnioPublicacion")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AutorId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AutorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("CategoriaId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Genero")
                         .IsRequired()
@@ -223,25 +236,90 @@ namespace BibliotecaNexus.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Libros", (string)null);
+                    b.ToTable("Libro", (string)null);
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Modulo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AgrupadoModulosId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Controller")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
+
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Metodo")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
+
+                    b.Property<Guid>("createdBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AgrupadoModulosId");
+
+                    b.ToTable("Modulo");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.ModulosRoles", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RolId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("createdBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModuloId");
+
+                    b.HasIndex("RolId");
+
+                    b.ToTable("ModulosRoles");
                 });
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Prestamo", b =>
                 {
-                    b.Property<int>("PrestamoId")
+                    b.Property<Guid>("PrestamoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrestamoId"), 1L, 1);
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("LibroId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("LibroId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LibroId1")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("LibroId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("PrestamoId");
 
@@ -256,20 +334,18 @@ namespace BibliotecaNexus.Migrations
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Reserva", b =>
                 {
-                    b.Property<int>("ReservaId")
+                    b.Property<Guid>("ReservaId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservaId"), 1L, 1);
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("LibroId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("LibroId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LibroId1")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("LibroId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ReservaId");
 
@@ -282,32 +358,78 @@ namespace BibliotecaNexus.Migrations
                     b.ToTable("Reservas", (string)null);
                 });
 
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Rol", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("createdBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Rol");
+                });
+
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Usuario", b =>
                 {
-                    b.Property<int>("UsuarioId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioId"), 1L, 1);
-
-                    b.Property<string>("Contrasena")
+                    b.Property<string>("Apellido")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NombreUsuario")
+                    b.Property<string>("DNI")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TipoUsuario")
+                    b.Property<string>("Direccion")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UsuarioId");
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
 
-                    b.ToTable("Usuarios", (string)null);
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RolId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("createdBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RolId");
+
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Comentario", b =>
@@ -350,6 +472,36 @@ namespace BibliotecaNexus.Migrations
                     b.Navigation("Autor");
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Modulo", b =>
+                {
+                    b.HasOne("BibliotecaNexus.Data.Domain.Entidades.AgrupadoModulos", "AgrupadoModulos")
+                        .WithMany("Modulos")
+                        .HasForeignKey("AgrupadoModulosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AgrupadoModulos");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.ModulosRoles", b =>
+                {
+                    b.HasOne("BibliotecaNexus.Data.Domain.Entidades.Modulo", "Modulo")
+                        .WithMany("ModulosRoles")
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BibliotecaNexus.Data.Domain.Entidades.Rol", "Rol")
+                        .WithMany("ModulosRoles")
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Modulo");
+
+                    b.Navigation("Rol");
                 });
 
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Prestamo", b =>
@@ -398,6 +550,22 @@ namespace BibliotecaNexus.Migrations
                     b.Navigation("Libro");
                 });
 
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Usuario", b =>
+                {
+                    b.HasOne("BibliotecaNexus.Data.Domain.Entidades.Rol", "Rol")
+                        .WithMany("Usuarios")
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rol");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.AgrupadoModulos", b =>
+                {
+                    b.Navigation("Modulos");
+                });
+
             modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Autor", b =>
                 {
                     b.Navigation("Libros");
@@ -415,6 +583,18 @@ namespace BibliotecaNexus.Migrations
                     b.Navigation("Prestamos");
 
                     b.Navigation("Reservas");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Modulo", b =>
+                {
+                    b.Navigation("ModulosRoles");
+                });
+
+            modelBuilder.Entity("BibliotecaNexus.Data.Domain.Entidades.Rol", b =>
+                {
+                    b.Navigation("ModulosRoles");
+
+                    b.Navigation("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

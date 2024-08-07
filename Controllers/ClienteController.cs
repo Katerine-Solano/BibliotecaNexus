@@ -1,145 +1,136 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace BibliotecaNexus.Controllers
 {
     public class ClienteController : Controller
     {
+        private readonly ILogger<ClienteController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public ClienteController(BibliotecaNexusDbContext context)
+        public ClienteController(BibliotecaNexusDbContext context, ILogger<ClienteController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Cliente
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            var clientes = _context.Cliente.Where(c => !c.Eliminado).ProjectToType<ClienteVm>().ToList();
+
+            return View(clientes);
         }
 
-        // GET: Cliente/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return View(cliente);
-        }
-
-        // GET: Cliente/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Cliente/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClienteId,Nombre,Direccion,Email,Telefono")] Cliente cliente)
+        public IActionResult Insertar(ClienteVm cliente)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cliente);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(cliente);
-        }
+                var nuevaCliente = new Cliente
+                {
+                    Nombre = cliente.Nombre,
+                    Direccion = cliente.Direccion,
+                    Email = cliente.Email,
+                    Telefono = cliente.Telefono,
+                    Eliminado = false,
+                    ClienteId = Guid.NewGuid(),
+                };
 
-        // GET: Cliente/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-            return View(cliente);
-        }
-
-        // POST: Cliente/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,Nombre,Direccion,Email,Telefono")] Cliente cliente)
-        {
-            if (id != cliente.ClienteId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(cliente);
-                    await _context.SaveChangesAsync();
+                    _context.Cliente.Add(nuevaCliente);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!ClienteExists(cliente.ClienteId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar la nueva cliente.");
+                    _logger.LogError(ex, "Error al agregar un nuevo cliente");
                 }
-                return RedirectToAction(nameof(Index));
             }
+
             return View(cliente);
         }
 
-        // GET: Cliente/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid clienteId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
+            var cliente = _context.Cliente.FirstOrDefault(c => c.ClienteId == clienteId);
             if (cliente == null)
             {
                 return NotFound();
             }
 
+            var clienteVm = new ClienteVm
+            {
+                ClienteId = cliente.ClienteId,
+                Nombre = cliente.Nombre,
+                Direccion = cliente.Direccion,
+                Email = cliente.Email,
+                Telefono = cliente.Telefono
+            };
+
+            return View(clienteVm);
+        }
+
+
+        [HttpPost]
+        public IActionResult Editar(ClienteVm cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                var clienteExistente = _context.Cliente.FirstOrDefault(c => c.ClienteId == cliente.ClienteId);
+                if (clienteExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    clienteExistente.Nombre = cliente.Nombre;
+                    clienteExistente.Direccion = cliente.Direccion;
+                    clienteExistente.Email = cliente.Email;
+                    clienteExistente.Telefono = cliente.Telefono;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar el cliente.");
+                    _logger.LogError(ex, "Error al editar el cliente");
+                }
+            }
+
             return View(cliente);
         }
 
-        // POST: Cliente/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid clienteId)
         {
-            var cliente = await _context.Clientes.FindAsync(id);
-            _context.Clientes.Remove(cliente);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var cliente = _context.Cliente.FirstOrDefault(n => n.ClienteId == clienteId);
+            if (cliente == null)
+            {
+                return NotFound();
+            }
 
-        private bool ClienteExists(int id)
-        {
-            return _context.Clientes.Any(e => e.ClienteId == id);
+            try
+            {
+
+                cliente.Eliminado = true;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar añ cliente.");
+                _logger.LogError(ex, "Error al eliminar al cliente");
+                return View("Index");
+            }
         }
     }
 }
-

@@ -1,141 +1,143 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace BibliotecaNexus.Controllers
 {
     public class PrestamoController : Controller
     {
+        private readonly ILogger<PrestamoController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public PrestamoController(BibliotecaNexusDbContext context)
+        public PrestamoController(BibliotecaNexusDbContext context, ILogger<PrestamoController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Prestamo
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var prestamos = await _context.Prestamos
+            var prestamos = _context.Prestamo
                 .Include(p => p.Cliente)
                 .Include(p => p.Libro)
-                .ToListAsync();
+                .ProjectToType<PrestamoVm>()
+                .ToList();
             return View(prestamos);
         }
 
-        // GET: Prestamo/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Insertar()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre");
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo");
             return View();
         }
 
-        // POST: Prestamo/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PrestamoId,ClienteId,LibroId")] Prestamo prestamo)
+        public IActionResult Insertar(PrestamoVm prestamo)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(prestamo);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", prestamo.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", prestamo.LibroId);
-            return View(prestamo);
-        }
+                var nuevoPrestamo = new Prestamo
+                {
+                    PrestamoId = Guid.NewGuid(),
+                    ClienteId = prestamo.ClienteId,
+                    LibroId = prestamo.LibroId
+                };
 
-        // GET: Prestamo/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            if (prestamo == null)
-            {
-                return NotFound();
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", prestamo.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", prestamo.LibroId);
-            return View(prestamo);
-        }
-
-        // POST: Prestamo/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PrestamoId,ClienteId,LibroId")] Prestamo prestamo)
-        {
-            if (id != prestamo.PrestamoId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(prestamo);
-                    await _context.SaveChangesAsync();
+                    _context.Prestamo.Add(nuevoPrestamo);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!PrestamoExists(prestamo.PrestamoId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar el nuevo préstamo.");
+                    _logger.LogError(ex, "Error al agregar un nuevo préstamo");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", prestamo.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", prestamo.LibroId);
+
             return View(prestamo);
         }
 
-        // GET: Prestamo/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid prestamoId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamo = await _context.Prestamos
+            var prestamo = _context.Prestamo
                 .Include(p => p.Cliente)
                 .Include(p => p.Libro)
-                .FirstOrDefaultAsync(m => m.PrestamoId == id);
+                .FirstOrDefault(p => p.PrestamoId == prestamoId);
             if (prestamo == null)
             {
                 return NotFound();
             }
 
+            var prestamoVm = new PrestamoVm
+            {
+                Id = prestamo.PrestamoId,
+                ClienteId = prestamo.ClienteId,
+                Cliente = prestamo.Cliente,
+                LibroId = prestamo.LibroId,
+                Libro = prestamo.Libro
+            };
+
+            return View(prestamoVm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(PrestamoVm prestamo)
+        {
+            if (ModelState.IsValid)
+            {
+                var prestamoExistente = _context.Prestamo.FirstOrDefault(p => p.PrestamoId == prestamo.Id);
+                if (prestamoExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    prestamoExistente.ClienteId = prestamo.ClienteId;
+                    prestamoExistente.LibroId = prestamo.LibroId;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar el préstamo.");
+                    _logger.LogError(ex, "Error al editar el préstamo");
+                }
+            }
+
             return View(prestamo);
         }
 
-        // POST: Prestamo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid prestamoId)
         {
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            _context.Prestamos.Remove(prestamo);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var prestamo = _context.Prestamo.FirstOrDefault(p => p.PrestamoId == prestamoId);
+            if (prestamo == null)
+            {
+                return NotFound();
+            }
 
-        private bool PrestamoExists(int id)
-        {
-            return _context.Prestamos.Any(e => e.PrestamoId == id);
+            try
+            {
+                _context.Prestamo.Remove(prestamo);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar el préstamo.");
+                _logger.LogError(ex, "Error al eliminar el préstamo");
+                return View("Index");
+            }
         }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using BibliotecaNexus.Data.Domain;
-using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace BibliotecaNexus.Controllers
 {
@@ -13,132 +14,91 @@ namespace BibliotecaNexus.Controllers
         {
             _context = context;
         }
-
-        // GET: Usuario
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            return View();
         }
-
-        // GET: Usuario/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpPost]
+        public IActionResult Index(UsuarioVm vm)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.UsuarioId == id);
+            var usuario = _context.Usuario.Where(u => u.Eliminado == false & u.Email == vm.Email).ProjectToType<UsuarioVm>().FirstOrDefault();
             if (usuario == null)
             {
-                return NotFound();
+                ViewBag.Error = "Usuario o contraseña no existen";
+                return View(new UsuarioVm());
             }
-
-            return View(usuario);
+            if (usuario.Password != Utilidades.Utilidades.GetMD5(vm.Password))
+            {
+                ViewBag.Error = "Usuario o contraseña no existen";
+                return View(new UsuarioVm());
+            }
+            var modulosroles = _context.ModulosRoles.Where(u => u.Eliminado == false && u.RolId == usuario.Rol.Id).ProjectToType<ModulosRolesVm>().ToList();
+            var agrupadosId = modulosroles.Select(ms => ms.Modulo.AgrupadoModulosId).Distinct().ToList();
+            var agrupados = _context.AgrupadoModulos.Where(u => agrupadosId.Contains(u.Id)).ProjectToType<AgrupadoModulosVm>().ToList();
+            foreach (var item in agrupados)
+            {
+                var modulosactuales = modulosroles.Where(u => u.Modulo.AgrupadoModulosId == item.Id).Select(ms => ms.Modulo.Id).Distinct().ToList();
+                item.Modulos = item.Modulos.Where(u => modulosactuales.Contains(u.Id)).ToList();
+            }
+            usuario.Menu = agrupados;
+            var sesionjson = JsonConvert.SerializeObject(usuario);
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(sesionjson);
+            var sesionbas64 = System.Convert.ToBase64String(plainTextBytes);
+            HttpContext.Session.SetString("UsuarioObjeto", sesionbas64);
+            return RedirectToAction("Index", "Home");
         }
 
-        // GET: Usuario/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult CambiarContraseña()
         {
             return View();
         }
 
-        // POST: Usuario/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsuarioId,NombreUsuario,Contrasena,TipoUsuario")] Usuario usuario)
+        public IActionResult CambiarContraseña(string nuevaContraseña, string confirmarContraseña)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(nuevaContraseña) || string.IsNullOrEmpty(confirmarContraseña))
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(usuario);
-        }
-
-        // GET: Usuario/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
+                TempData["mensaje"] = "Por favor ingrese una nueva contraseña y confirme la contraseña.";
+                return RedirectToAction("CambiarContraseña");
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
+            if (nuevaContraseña != confirmarContraseña)
+            {
+                TempData["mensaje"] = "Las contraseñas no coinciden.";
+                return RedirectToAction("CambiarContraseña");
+            }
+
+            // Obtener la información del usuario de la sesión
+            var sesionBase64 = HttpContext.Session.GetString("UsuarioObjeto");
+            var base64EncodedBytes = System.Convert.FromBase64String(sesionBase64);
+            var usuario = JsonConvert.DeserializeObject<UsuarioVm>(System.Text.Encoding.UTF8.GetString(base64EncodedBytes));
+
             if (usuario == null)
             {
-                return NotFound();
+                // Manejar el caso en que el usuario no esté en la sesión
+                TempData["mensaje"] = "Usuario no encontrado";
+                return RedirectToAction("Index", "Home"); // O redirecciona a donde desees
             }
-            return View(usuario);
-        }
 
-        // POST: Usuario/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UsuarioId,NombreUsuario,Contrasena,TipoUsuario")] Usuario usuario)
-        {
-            if (id != usuario.UsuarioId)
+            var usuarioNuevo = _context.Usuario.FirstOrDefault(u => u.Id == usuario.Id);
+
+            if (usuarioNuevo == null)
             {
-                return NotFound();
+                TempData["mensaje"] = "Usuario no encontrado";
+                return RedirectToAction("Index", "Home");
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.UsuarioId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(usuario);
+            usuarioNuevo.Password = Utilidades.Utilidades.GetMD5(nuevaContraseña);
+
+            _context.SaveChanges();
+            TempData["mensaje"] = "Cambio de Contraseña Exitoso";
+
+
+            HttpContext.Session.Remove("UsuarioObjeto");
+
+            return RedirectToAction("Index");
         }
 
-        // GET: Usuario/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.UsuarioId == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        // POST: Usuario/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool UsuarioExists(int id)
-        {
-            return _context.Usuarios.Any(e => e.UsuarioId == id);
-        }
     }
 }

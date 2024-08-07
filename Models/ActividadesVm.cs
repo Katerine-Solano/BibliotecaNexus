@@ -2,7 +2,7 @@
 {
     public class ActividadesVm
     {
-        public int ActividadId { get; set; }
+        public Guid ActividadId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechaInicio { get; set; }

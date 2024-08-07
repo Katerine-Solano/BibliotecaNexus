@@ -2,13 +2,13 @@
 {
     public class Libro
     {
-        public int LibroId { get; set; }
+        public Guid LibroId { get; set; }
         public string Titulo { get; set; }
         public string ISBN { get; set; }
         public string Genero { get; set; }
-        public int AnioPublicacion { get; set; }
-        public int AutorId { get; set; }
-        public int CategoriaId { get; set; }
+        public Guid AnioPublicacion { get; set; }
+        public Guid AutorId { get; set; }
+        public Guid CategoriaId { get; set; }
 
         public Autor Autor { get; set; }
         public Categoria Categoria { get; set; }

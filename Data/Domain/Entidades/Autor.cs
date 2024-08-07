@@ -2,7 +2,7 @@
 {
     public class Autor
     {
-        public int AutorId { get; set; }
+        public Guid AutorId { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }

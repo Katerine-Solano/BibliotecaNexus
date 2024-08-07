@@ -1,138 +1,141 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace BibliotecaNexus.Controllers
 {
     public class ComentarioController : Controller
     {
+        private readonly ILogger<ComentarioController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public ComentarioController(BibliotecaNexusDbContext context)
+        public ComentarioController(BibliotecaNexusDbContext context, ILogger<ComentarioController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Comentario
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var comentarios = await _context.Comentarios.Include(c => c.Cliente).Include(c => c.Libro).ToListAsync();
+            var comentarios = _context.Comentario
+                .Include(c => c.Cliente)
+                .Include(c => c.Libro)
+                .ProjectToType<ComentarioVm>()
+                .ToList();
             return View(comentarios);
         }
 
-        // GET: Comentario/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Insertar()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre");
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo");
             return View();
         }
 
-        // POST: Comentario/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ComentarioId,ClienteId,LibroId")] Comentario comentario)
+        public IActionResult Insertar(ComentarioVm comentario)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(comentario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", comentario.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", comentario.LibroId);
-            return View(comentario);
-        }
+                var nuevoComentario = new Comentario
+                {
+                    ComentarioId = Guid.NewGuid(),
+                    ClienteId = comentario.ClienteId,
+                    LibroId = comentario.LibroId
+                };
 
-        // GET: Comentario/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var comentario = await _context.Comentarios.FindAsync(id);
-            if (comentario == null)
-            {
-                return NotFound();
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", comentario.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", comentario.LibroId);
-            return View(comentario);
-        }
-
-        // POST: Comentario/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ComentarioId,ClienteId,LibroId")] Comentario comentario)
-        {
-            if (id != comentario.ComentarioId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(comentario);
-                    await _context.SaveChangesAsync();
+                    _context.Comentario.Add(nuevoComentario);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!ComentarioExists(comentario.ComentarioId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar el nuevo comentario.");
+                    _logger.LogError(ex, "Error al agregar un nuevo comentario");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", comentario.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", comentario.LibroId);
+
             return View(comentario);
         }
 
-        // GET: Comentario/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid comentarioId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var comentario = await _context.Comentarios
+            var comentario = _context.Comentario
                 .Include(c => c.Cliente)
                 .Include(c => c.Libro)
-                .FirstOrDefaultAsync(m => m.ComentarioId == id);
+                .FirstOrDefault(c => c.ComentarioId == comentarioId);
             if (comentario == null)
             {
                 return NotFound();
             }
 
+            var comentarioVm = new ComentarioVm
+            {
+                ComentarioId = comentario.ComentarioId,
+                ClienteId = comentario.ClienteId,
+                Cliente = comentario.Cliente,
+                LibroId = comentario.LibroId,
+                Libro = comentario.Libro
+            };
+
+            return View(comentarioVm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(ComentarioVm comentario)
+        {
+            if (ModelState.IsValid)
+            {
+                var comentarioExistente = _context.Comentario.FirstOrDefault(c => c.ComentarioId == comentario.ComentarioId);
+                if (comentarioExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    comentarioExistente.ClienteId = comentario.ClienteId;
+                    comentarioExistente.LibroId = comentario.LibroId;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar el comentario.");
+                    _logger.LogError(ex, "Error al editar el comentario");
+                }
+            }
+
             return View(comentario);
         }
 
-        // POST: Comentario/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid comentarioId)
         {
-            var comentario = await _context.Comentarios.FindAsync(id);
-            _context.Comentarios.Remove(comentario);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var comentario = _context.Comentario.FirstOrDefault(c => c.ComentarioId == comentarioId);
+            if (comentario == null)
+            {
+                return NotFound();
+            }
 
-        private bool ComentarioExists(int id)
-        {
-            return _context.Comentarios.Any(e => e.ComentarioId == id);
+            try
+            {
+                _context.Comentario.Remove(comentario);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar el comentario.");
+                _logger.LogError(ex, "Error al eliminar el comentario");
+                return View("Index");
+            }
         }
     }
 }

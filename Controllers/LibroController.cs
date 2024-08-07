@@ -1,158 +1,140 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
 
 namespace BibliotecaNexus.Controllers
 {
     public class LibroController : Controller
     {
+        private readonly ILogger<LibroController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public LibroController(BibliotecaNexusDbContext context)
+        public LibroController(BibliotecaNexusDbContext context, ILogger<LibroController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Libro
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var libros = _context.Libros.Include(l => l.Autor).Include(l => l.Categoria);
-            return View(await libros.ToListAsync());
-        }
-
-        // GET: Libro/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros
+            var libros = _context.Libro
                 .Include(l => l.Autor)
                 .Include(l => l.Categoria)
-                .FirstOrDefaultAsync(m => m.LibroId == id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
-
-            return View(libro);
+                .ProjectToType<LibroVm>()
+                .ToList();
+            return View(libros);
         }
 
-        // GET: Libro/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Insertar()
         {
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nombre");
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nombre");
             return View();
         }
 
-        // POST: Libro/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LibroId,Titulo,ISBN,Genero,AnioPublicacion,AutorId,CategoriaId")] Libro libro)
+        public IActionResult Insertar(LibroVm libro)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(libro);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nombre", libro.AutorId);
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nombre", libro.CategoriaId);
-            return View(libro);
-        }
+                var nuevoLibro = new Libro
+                {
+                    LibroId = Guid.NewGuid(),
+                    Titulo = libro.Titulo,
+                    // Agregar otros campos necesarios
+                };
 
-        // GET: Libro/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros.FindAsync(id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nombre", libro.AutorId);
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nombre", libro.CategoriaId);
-            return View(libro);
-        }
-
-        // POST: Libro/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LibroId,Titulo,ISBN,Genero,AnioPublicacion,AutorId,CategoriaId")] Libro libro)
-        {
-            if (id != libro.LibroId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(libro);
-                    await _context.SaveChangesAsync();
+                    _context.Libro.Add(nuevoLibro);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!LibroExists(libro.LibroId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar el nuevo libro.");
+                    _logger.LogError(ex, "Error al agregar un nuevo libro");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nombre", libro.AutorId);
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nombre", libro.CategoriaId);
+
             return View(libro);
         }
 
-        // GET: Libro/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid libroId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros
+            var libro = _context.Libro
                 .Include(l => l.Autor)
                 .Include(l => l.Categoria)
-                .FirstOrDefaultAsync(m => m.LibroId == id);
+                .FirstOrDefault(l => l.LibroId == libroId);
             if (libro == null)
             {
                 return NotFound();
             }
 
+            var libroVm = new LibroVm
+            {
+                LibroId = libro.LibroId,
+                Titulo = libro.Titulo,
+                // Agregar otros campos necesarios
+            };
+
+            return View(libroVm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(LibroVm libro)
+        {
+            if (ModelState.IsValid)
+            {
+                var libroExistente = _context.Libro.FirstOrDefault(l => l.LibroId == libro.LibroId);
+                if (libroExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    libroExistente.Titulo = libro.Titulo;
+                    // Actualizar otros campos necesarios
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar el libro.");
+                    _logger.LogError(ex, "Error al editar el libro");
+                }
+            }
+
             return View(libro);
         }
 
-        // POST: Libro/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid libroId)
         {
-            var libro = await _context.Libros.FindAsync(id);
-            _context.Libros.Remove(libro);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var libro = _context.Libro.FirstOrDefault(l => l.LibroId == libroId);
+            if (libro == null)
+            {
+                return NotFound();
+            }
 
-        private bool LibroExists(int id)
-        {
-            return _context.Libros.Any(e => e.LibroId == id);
+            try
+            {
+                _context.Libro.Remove(libro);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar el libro.");
+                _logger.LogError(ex, "Error al eliminar el libro");
+                return View("Index");
+            }
         }
     }
 }

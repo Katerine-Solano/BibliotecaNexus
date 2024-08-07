@@ -2,7 +2,7 @@
 {
     public class CategoriaVm
     {
-        public int CategoriaId { get; set; }
+        public Guid CategoriaId { get; set; }
         public string Nombre { get; set; }
     }
 }

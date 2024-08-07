@@ -1,141 +1,143 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace BibliotecaNexus.Controllers
 {
     public class ReservaController : Controller
     {
+        private readonly ILogger<ReservaController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public ReservaController(BibliotecaNexusDbContext context)
+        public ReservaController(BibliotecaNexusDbContext context, ILogger<ReservaController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Reserva
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var reservas = await _context.Reservas
+            var reservas = _context.Reserva
                 .Include(r => r.Cliente)
                 .Include(r => r.Libro)
-                .ToListAsync();
+                .ProjectToType<ReservaVm>()
+                .ToList();
             return View(reservas);
         }
 
-        // GET: Reserva/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Insertar()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre");
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo");
             return View();
         }
 
-        // POST: Reserva/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ReservaId,ClienteId,LibroId")] Reserva reserva)
+        public IActionResult Insertar(ReservaVm reserva)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(reserva);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", reserva.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", reserva.LibroId);
-            return View(reserva);
-        }
+                var nuevaReserva = new Reserva
+                {
+                    ReservaId = Guid.NewGuid(),
+                    ClienteId = reserva.ClienteId,
+                    LibroId = reserva.LibroId
+                };
 
-        // GET: Reserva/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var reserva = await _context.Reservas.FindAsync(id);
-            if (reserva == null)
-            {
-                return NotFound();
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", reserva.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", reserva.LibroId);
-            return View(reserva);
-        }
-
-        // POST: Reserva/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ReservaId,ClienteId,LibroId")] Reserva reserva)
-        {
-            if (id != reserva.ReservaId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(reserva);
-                    await _context.SaveChangesAsync();
+                    _context.Reserva.Add(nuevaReserva);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!ReservaExists(reserva.ReservaId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar la nueva reserva.");
+                    _logger.LogError(ex, "Error al agregar una nueva reserva");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Nombre", reserva.ClienteId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "LibroId", "Titulo", reserva.LibroId);
+
             return View(reserva);
         }
 
-        // GET: Reserva/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid reservaId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var reserva = await _context.Reservas
+            var reserva = _context.Reserva
                 .Include(r => r.Cliente)
                 .Include(r => r.Libro)
-                .FirstOrDefaultAsync(m => m.ReservaId == id);
+                .FirstOrDefault(r => r.ReservaId == reservaId);
             if (reserva == null)
             {
                 return NotFound();
             }
 
+            var reservaVm = new ReservaVm
+            {
+                Id = reserva.ReservaId,
+                ClienteId = reserva.ClienteId,
+                Cliente = reserva.Cliente,
+                LibroId = reserva.LibroId,
+                Libro = reserva.Libro
+            };
+
+            return View(reservaVm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(ReservaVm reserva)
+        {
+            if (ModelState.IsValid)
+            {
+                var reservaExistente = _context.Reserva.FirstOrDefault(r => r.ReservaId == reserva.Id);
+                if (reservaExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    reservaExistente.ClienteId = reserva.ClienteId;
+                    reservaExistente.LibroId = reserva.LibroId;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar la reserva.");
+                    _logger.LogError(ex, "Error al editar la reserva");
+                }
+            }
+
             return View(reserva);
         }
 
-        // POST: Reserva/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid reservaId)
         {
-            var reserva = await _context.Reservas.FindAsync(id);
-            _context.Reservas.Remove(reserva);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var reserva = _context.Reserva.FirstOrDefault(r => r.ReservaId == reservaId);
+            if (reserva == null)
+            {
+                return NotFound();
+            }
 
-        private bool ReservaExists(int id)
-        {
-            return _context.Reservas.Any(e => e.ReservaId == id);
+            try
+            {
+                _context.Reserva.Remove(reserva);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar la reserva.");
+                _logger.LogError(ex, "Error al eliminar la reserva");
+                return View("Index");
+            }
         }
     }
 }

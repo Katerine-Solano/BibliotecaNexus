@@ -2,7 +2,7 @@
 {
     public class LibroVm
     {
-        public int LibroId { get; set; }
+        public Guid LibroId { get; set; }
         public string Titulo { get; set; }
     }
     }

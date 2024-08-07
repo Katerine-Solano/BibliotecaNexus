@@ -8,7 +8,7 @@ namespace BibliotecaNexus.Data.Domain
     {
         public void Configure(EntityTypeBuilder<Libro> builder)
         {
-            builder.ToTable("Libros");
+            builder.ToTable("Libro");
 
             builder.HasKey(e => e.LibroId);
             builder.Property(e => e.Titulo).IsRequired().HasMaxLength(255);
@@ -25,11 +25,11 @@ namespace BibliotecaNexus.Data.Domain
         }
     }
 
-    public class ActividadesConfiguracion : IEntityTypeConfiguration<Actividades>
+    public class ActividadeConfiguracion : IEntityTypeConfiguration<Actividade>
     {
-        public void Configure(EntityTypeBuilder<Actividades> builder)
+        public void Configure(EntityTypeBuilder<Actividade> builder)
         {
-            builder.ToTable("Actividades");
+            builder.ToTable("Actividade");
 
             builder.HasKey(e => e.ActividadId);
 
@@ -93,7 +93,7 @@ namespace BibliotecaNexus.Data.Domain
         }
     }
 
-    public class ComentariosConfiguracion : IEntityTypeConfiguration<Comentario>
+    public class ComentarioConfiguracion : IEntityTypeConfiguration<Comentario>
     {
         public void Configure(EntityTypeBuilder<Comentario> builder)
         {
@@ -147,17 +147,52 @@ namespace BibliotecaNexus.Data.Domain
         }
     }
 
+
     public class UsuarioConfiguracion : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            builder.ToTable("Usuarios");
-
-            builder.HasKey(e => e.UsuarioId);
-
-            builder.Property(e => e.NombreUsuario).HasMaxLength(50).IsRequired();
-            builder.Property(e => e.Contrasena).HasMaxLength(100).IsRequired();
-            builder.Property(e => e.TipoUsuario).HasMaxLength(50).IsRequired();
+            builder.HasKey(u => u.Id);
+            builder.Property(u => u.Nombre).HasColumnType("varchar(255)");
         }
     }
+    public class RolConfiguracion : IEntityTypeConfiguration<Rol>
+    {
+        public void Configure(EntityTypeBuilder<Rol> builder)
+        {
+            builder.HasKey(r => r.Id);
+            builder.Property(r => r.Descripcion).HasColumnType("varchar(255)");
+            builder.HasMany(r => r.ModulosRoles).WithOne(r => r.Rol).HasForeignKey(r => r.RolId);
+            builder.HasMany(r => r.Usuarios).WithOne(r => r.Rol).HasForeignKey(r => r.RolId);
+        }
+    }
+    public class ModuloConfiguracion : IEntityTypeConfiguration<Modulo>
+    {
+        public void Configure(EntityTypeBuilder<Modulo> builder)
+        {
+            builder.HasKey(m => m.Id);
+            builder.Property(m => m.Nombre).HasColumnType("varchar(25)");
+            builder.Property(m => m.Metodo).HasColumnType("varchar(25)");
+            builder.Property(m => m.Controller).HasColumnType("varchar(25)");
+            builder.HasMany(m => m.ModulosRoles).WithOne(r => r.Modulo).HasForeignKey(r => r.ModuloId);
+        }
+    }
+    public class ModulosRolesConfiguracion : IEntityTypeConfiguration<ModulosRoles>
+    {
+        public void Configure(EntityTypeBuilder<ModulosRoles> builder)
+        {
+            builder.HasKey(mr => mr.Id);
+
+        }
+    }
+    public class AgrupadoModulosConfiguracion : IEntityTypeConfiguration<AgrupadoModulos>
+    {
+        public void Configure(EntityTypeBuilder<AgrupadoModulos> builder)
+        {
+            builder.HasKey(am => am.Id);
+            builder.Property(am => am.Descripcion).HasColumnType("varchar(255)");
+            builder.HasMany(am => am.Modulos).WithOne(am => am.AgrupadoModulos).HasForeignKey(am => am.AgrupadoModulosId);
+        }
+    }
+
 }

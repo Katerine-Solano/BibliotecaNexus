@@ -4,10 +4,10 @@ namespace BibliotecaNexus.Models
 {
     public class ComentarioVm
     {
-        public int ComentarioId { get; set; }
-        public int ClienteId { get; set; }
+        public Guid ComentarioId { get; set; }
+        public Guid ClienteId { get; set; }
         public Cliente Cliente { get; set; }
-        public int LibroId { get; set; }
+        public Guid LibroId { get; set; }
         public Libro Libro { get; set; }
     }
 }
