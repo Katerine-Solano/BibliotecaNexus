@@ -1,41 +1,53 @@
-﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Cliente>
+﻿@model List<ClienteVm>
 @{
     ViewData["Title"] = "Cliente";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="container">
+    <h2>Clientes</h2>
 
-<h1>Cliente</h1>
+    <form asp-action="Insertar" method="post">
+        <div class="form-group">
+            <input type="submit" value="Agregar Cliente" class="btn btn-success">
+        </div>
+    </form>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Cliente</a>
-</p>
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cliente in Model)
+                    {
+                        <tr>
+                            <td>@cliente.Nombre</td>
+                            <td>@cliente.Direccion</td>
+                            <td>@cliente.Email</td>
+                            <td>@cliente.Telefono</td>
+                            <td>
+                                <a href="@Url.Action("Editar", "Cliente", new { clienteId = cliente.ClienteId })" class="btn btn-primary btn-sm">Editar</a>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Dirección</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.ClienteId</td>
-                <td>@item.Nombre</td>
-                <td>@item.Direccion</td>
-                <td>@item.Email</td>
-                <td>@item.Telefono</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ClienteId" class="btn btn-warning">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.ClienteId" class="btn btn-danger">Eliminar</a>
-                    <a asp-action="Details" asp-route-id="@item.ClienteId" class="btn btn-info">Detalles</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                                <form method="post" asp-action="Eliminar" asp-route-clienteId="@cliente.ClienteId" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este cliente?');">
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p>No hay clientes registrados.</p>
+    }
+    </d

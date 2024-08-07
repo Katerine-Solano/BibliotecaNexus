@@ -1,0 +1,27 @@
+﻿@model UsuarioVm
+@{
+    ViewData["Title"] = "CambiarContraseña";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cambiar Contraseña</h1>
+
+@if (!string.IsNullOrEmpty(TempData["mensaje"] as string))
+{
+    <div class="alert alert-info" role="alert">
+        @TempData["mensaje"]
+    </div>
+}
+
+<form method="post" asp-action="CambiarContraseña">
+    <div class="form-group">
+        <label for="nuevaContraseña">Nueva Contraseña</label>
+        <input type="password" class="form-control" id="nuevaContraseña" name="nuevaContraseña" required>
+    </div>
+    <div class="form-group">
+        <label for="confirmarContraseña">Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="confirmarContraseña" name="confirmarContraseña" required>
+    </div>
+    <input type="hidden" name="usuarioId" value="">
+    <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+</form>

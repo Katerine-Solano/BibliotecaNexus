@@ -1,0 +1,53 @@
+﻿@model List<BibliotecaNexus.Models.UsuarioVm>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Usuarios</h1>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["mensaje"]
+    </div>
+}
+
+<p>
+    <a asp-action="Insertar" class="btn btn-primary">Registrar Nuevo Usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>DNI</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nombre</td>
+                <td>@usuario.Apellido</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.DNI</td>
+                <td>@usuario.Direccion</td>
+                <td>@usuario.Telefono</td>
+                <td>@usuario.Rol.Descripcion</td>
+                <td>
+                    <a href="@Url.Action("Editar", "AgregarUsuario", new { UsuarioId = usuario.Id })" class="btn btn-info">Editar</a>
+
+                    <a href="@Url.Action("Eliminar", "AgregarUsuario", new { UsuarioId = usuario.Id })" class="btn btn-danger">Eliminar</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

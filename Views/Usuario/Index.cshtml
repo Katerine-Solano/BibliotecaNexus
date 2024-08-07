@@ -1,37 +1,103 @@
-﻿@model IEnumerable<BibliotecaNexus.Data.Domain.Entidades.Usuario>
+﻿@model UsuarioVm
 @{
-    ViewData["Title"] = "Usuarios";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
 
-<h1>Usuarios</h1>
+<style>
+    body {
+        background-image: url("");
+        background-size: cover;
+        background-position: center;
+    }
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Usuario</a>
-</p>
+    .login {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre de Usuario</th>
-            <th>Tipo de Usuario</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.UsuarioId</td>
-                <td>@item.NombreUsuario</td>
-                <td>@item.TipoUsuario</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.UsuarioId" class="btn btn-warning">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.UsuarioId" class="btn btn-danger">Eliminar</a>
-                    <a asp-action="Details" asp-route-id="@item.UsuarioId" class="btn btn-info">Detalles</a>
-                </td>
-            </tr>
+        .login input[type="text"],
+        .login input[type="password"] {
+            width: 100%;
+            padding: 10px 40px 10px 10px; /* Ajuste para dejar espacio para el ícono */
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            position: relative;
         }
-    </tbody>
-</table>
+
+    .password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .login input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+        .login input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+</style>
+
+<div class="row-6">
+    <h1>BibliotecaNexus</h1>
+    @if (!string.IsNullOrEmpty(ViewBag.Error))
+    {
+        <div class="ViewBag.ClaseMensaje" role="alert" id="success-alert">
+            <strong>@ViewBag.Error</strong>
+        </div>
+    }
+    <div class="main">
+        <div class="login">
+            <div class="inset">
+                <center></center>
+                <form method="post" asp-action="Index">
+                    <div>
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div style="position: relative;">
+                        <label asp-for="Password" class="control-label"></label>
+                        <div style="position: relative;">
+                            <input type="password" id="password-field" asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <span id="password-toggle" class="password-toggle">&#128065;</span>
+                        </div>
+                    </div>
+                    <div class="sing">
+                        <div class="submit">
+                            <input type="submit" value="Iniciar Sesión">
+                        </div>
+                        <div class="clear"> <br /> <br /> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const passwordField = document.getElementById("password-field");
+    const passwordToggle = document.getElementById("password-toggle");
+
+    passwordToggle.addEventListener("click", function () {
+        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+        passwordField.setAttribute("type", type);
+    });
+</script>

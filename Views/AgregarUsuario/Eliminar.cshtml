@@ -1,22 +1,19 @@
-﻿@model ClienteVm
+﻿@model UsuarioVm 
 @{
     ViewData["Title"] = "Eliminar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Eliminar</h1>
-
 <div class="container">
-    <h1>Eliminar Cliente</h1>
+    <h1>Eliminar Usuario</h1>
 
     <div class="row">
         <div class="col-md-6">
-            <p>¿Estás seguro de que deseas eliminar a un Cliente <strong>@Model.Nombre</strong>?</p>
+            <p>¿Estás seguro de que deseas eliminar este Usuario <strong>@Model.Nombre</strong>?</p>
             <form method="post" asp-action="Eliminar">
-                <input type="hidden" asp-for="ClienteId" />
+                <input type="hidden" asp-for="Id" />
                 <button type="submit" class="btn btn-danger">Eliminar</button>
                 <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
             </form>
         </div>
     </div>
-</div>
