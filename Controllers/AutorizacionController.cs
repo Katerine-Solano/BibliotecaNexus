@@ -1,144 +1,135 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
 
 namespace BibliotecaNexus.Controllers
 {
     public class AutorizacionController : Controller
     {
+        private readonly ILogger<AutorizacionController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public AutorizacionController(BibliotecaNexusDbContext context)
+        public AutorizacionController(BibliotecaNexusDbContext context, ILogger<AutorizacionController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Autorizacion
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Autorizaciones.ToListAsync());
+            var autorizaciones = _context.Autorizacione
+                .ProjectToType<AutorizacionVm>()
+                .ToList();
+            return View(autorizaciones);
         }
 
-        // GET: Autorizacion/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autorizacion = await _context.Autorizaciones
-                .FirstOrDefaultAsync(m => m.AutorizacionId == id);
-            if (autorizacion == null)
-            {
-                return NotFound();
-            }
-
-            return View(autorizacion);
-        }
-
-        // GET: Autorizacion/Create
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Insertar()
         {
             return View();
         }
 
-        // POST: Autorizacion/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutorizacionId,Modulo,Permiso")] Autorizacion autorizacion)
+        public IActionResult Insertar(AutorizacionVm autorizacion)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(autorizacion);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(autorizacion);
-        }
+                var nuevaAutorizacion = new Autorizacion
+                {
+                    AutorizacionId = Guid.NewGuid(),
+                    Modulo = autorizacion.Modulo,
+                    Permiso = autorizacion.Permiso
+                };
 
-        // GET: Autorizacion/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autorizacion = await _context.Autorizaciones.FindAsync(id);
-            if (autorizacion == null)
-            {
-                return NotFound();
-            }
-            return View(autorizacion);
-        }
-
-        // POST: Autorizacion/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AutorizacionId,Modulo,Permiso")] Autorizacion autorizacion)
-        {
-            if (id != autorizacion.AutorizacionId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(autorizacion);
-                    await _context.SaveChangesAsync();
+                    _context.Autorizacione.Add(nuevaAutorizacion);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!AutorizacionExists(autorizacion.AutorizacionId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar la nueva autorización.");
+                    _logger.LogError(ex, "Error al agregar una nueva autorización");
                 }
-                return RedirectToAction(nameof(Index));
             }
+
             return View(autorizacion);
         }
 
-        // GET: Autorizacion/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid autorizacionId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autorizacion = await _context.Autorizaciones
-                .FirstOrDefaultAsync(m => m.AutorizacionId == id);
+            var autorizacion = _context.Autorizacione.FirstOrDefault(a => a.AutorizacionId == autorizacionId);
             if (autorizacion == null)
             {
                 return NotFound();
             }
 
+            var autorizacionVm = new AutorizacionVm
+            {
+                AutorizacionId = autorizacion.AutorizacionId,
+                Modulo = autorizacion.Modulo,
+                Permiso = autorizacion.Permiso
+            };
+
+            return View(autorizacionVm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(AutorizacionVm autorizacion)
+        {
+            if (ModelState.IsValid)
+            {
+                var autorizacionExistente = _context.Autorizacione.FirstOrDefault(a => a.AutorizacionId == autorizacion.AutorizacionId);
+                if (autorizacionExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    autorizacionExistente.Modulo = autorizacion.Modulo;
+                    autorizacionExistente.Permiso = autorizacion.Permiso;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar la autorización.");
+                    _logger.LogError(ex, "Error al editar la autorización");
+                }
+            }
+
             return View(autorizacion);
         }
 
-        // POST: Autorizacion/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid autorizacionId)
         {
-            var autorizacion = await _context.Autorizaciones.FindAsync(id);
-            _context.Autorizaciones.Remove(autorizacion);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var autorizacion = _context.Autorizacione.FirstOrDefault(a => a.AutorizacionId == autorizacionId);
+            if (autorizacion == null)
+            {
+                return NotFound();
+            }
 
-        private bool AutorizacionExists(int id)
-        {
-            return _context.Autorizaciones.Any(e => e.AutorizacionId == id);
+            try
+            {
+                _context.Autorizacione.Remove(autorizacion);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar la autorización.");
+                _logger.LogError(ex, "Error al eliminar la autorización");
+                return View("Index");
+            }
         }
     }
 }

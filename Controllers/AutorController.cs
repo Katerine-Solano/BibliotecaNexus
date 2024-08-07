@@ -1,146 +1,128 @@
 ﻿using BibliotecaNexus.Data.Domain;
 using BibliotecaNexus.Data.Domain.Entidades;
+using BibliotecaNexus.Models;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace BibliotecaNexus.Controllers
 {
     public class AutorController : Controller
     {
+        private readonly ILogger<AutorController> _logger;
         private readonly BibliotecaNexusDbContext _context;
 
-        public AutorController(BibliotecaNexusDbContext context)
+        public AutorController(BibliotecaNexusDbContext context, ILogger<AutorController> logger)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: Autores
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Autores.ToListAsync());
+            var autores = _context.Autore.ProjectToType<AutorVm>().ToList();
+            return View(autores);
         }
 
-        // GET: Autores/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autor = await _context.Autores
-                .FirstOrDefaultAsync(m => m.AutorId == id);
-            if (autor == null)
-            {
-                return NotFound();
-            }
-
-            return View(autor);
-        }
-
-        // GET: Autores/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Autores/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutorId,Nombre,Apellido,Telefono,Cargo")] Autor autor)
+        public IActionResult Insertar(AutorVm autorVm)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(autor);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(autor);
-        }
+                var nuevoAutor = new Autor
+                {
+                    AutorId = Guid.NewGuid(),
+                    Nombre = autorVm.Nombre,
+                    Apellido = autorVm.Apellido,
+                    Telefono = autorVm.Telefono,
+                    Cargo = autorVm.Cargo,
+                    Libros = null // Inicializar con null o una lista vacía según corresponda
+                };
 
-        // GET: Autores/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autor = await _context.Autores.FindAsync(id);
-            if (autor == null)
-            {
-                return NotFound();
-            }
-            return View(autor);
-        }
-
-        // POST: Autores/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AutorId,Nombre,Apellido,Telefono,Cargo")] Autor autor)
-        {
-            if (id != autor.AutorId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(autor);
-                    await _context.SaveChangesAsync();
+                    _context.Autore.Add(nuevoAutor);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
-                    if (!AutorExists(autor.AutorId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar agregar el nuevo autor.");
+                    _logger.LogError(ex, "Error al agregar un nuevo autor");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(autor);
+
+            return View(autorVm);
         }
 
-        // GET: Autores/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet]
+        public IActionResult Editar(Guid autorId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autor = await _context.Autores
-                .FirstOrDefaultAsync(m => m.AutorId == id);
+            var autor = _context.Autore.FirstOrDefault(a => a.AutorId == autorId);
             if (autor == null)
             {
                 return NotFound();
             }
 
-            return View(autor);
+            var autorVm = autor.Adapt<AutorVm>();
+
+            return View(autorVm);
         }
 
-        // POST: Autores/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Editar(AutorVm autorVm)
         {
-            var autor = await _context.Autores.FindAsync(id);
-            _context.Autores.Remove(autor);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            if (ModelState.IsValid)
+            {
+                var autorExistente = _context.Autore.FirstOrDefault(a => a.AutorId == autorVm.AutorId);
+                if (autorExistente == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    autorExistente.Nombre = autorVm.Nombre;
+                    autorExistente.Apellido = autorVm.Apellido;
+                    autorExistente.Telefono = autorVm.Telefono;
+                    autorExistente.Cargo = autorVm.Cargo;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar editar el autor.");
+                    _logger.LogError(ex, "Error al editar el autor");
+                }
+            }
+
+            return View(autorVm);
         }
 
-        private bool AutorExists(int id)
+        [HttpPost]
+        public IActionResult Eliminar(Guid autorId)
         {
-            return _context.Autores.Any(e => e.AutorId == id);
+            var autor = _context.Autore.FirstOrDefault(a => a.AutorId == autorId);
+            if (autor == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                _context.Autore.Remove(autor);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al intentar eliminar el autor.");
+                _logger.LogError(ex, "Error al eliminar el autor");
+                return View("Index");
+            }
         }
     }
 }
-
-
